@@ -15,48 +15,29 @@ An in-depth paragraph about your project and overview of use.
 
 ### 01_Proxy_Self_Signed
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
 ### 02_Proxy_Letsencrypt
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+### 03_Heimdall
 
-## Help
+### 04_SSH_Client
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+### 05_Samba
 
-## Authors
+### 06_Streaming
 
-Contributors names and contact info
+### 07_Kodi
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+### 08_Fakturama
 
-## Version History
+### 09_Pihole
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+### 10_Nextcloud
 
-## License
+### 11_Wordpress
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+### 12_Modified_Shop
 
-## Acknowledgments
+### 13_ Mailserver
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+### 14_Calibre
+
