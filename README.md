@@ -1,17 +1,19 @@
 # BDCloud Server
 
 Realisierung eines Homeservers basierend auf Docker Anwendungscontainern
-
+  
+    
+    
 ## Einleitung
 
-An in-depth paragraph about your project and overview of use.
+Blah
 
 ## Anwendungsübersicht
 
 ### 00_Hostsystem
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Blah
+* Blah
 
 ### 01_Proxy_Self_Signed
 
