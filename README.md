@@ -17,3 +17,8 @@ Welches Image wird verwendet?
 * Wie bauen die Container aufeinander auf?
 * Allg. vorgehensweise
 * Über Conf. Datei, in der geguckt wird, was schon installiert ist?
+
+
+
+### Ideen
+<https://geek-cookbook.funkypenguin.co.nz/recipes/autopirate/>
