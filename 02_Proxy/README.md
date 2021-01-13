@@ -7,6 +7,7 @@ NGINX // Heimdall
 ## Einleitung
 
 Was macht der Proxy bzw. Heimdall
+Welches Image wird verwendet?
 
 
 ## ToDo
