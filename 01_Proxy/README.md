@@ -14,3 +14,8 @@ Erklärung
 
 Erklärung
 
+
+## ToDo
+
+<https://stackoverflow.com/questions/55435997/using-etc-hosts-with-docker>
+
