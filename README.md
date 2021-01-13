@@ -2,44 +2,18 @@
 
 Realisierung eines Homeservers basierend auf Docker Anwendungscontainern
   
-    
-    
+
 ## Einleitung
 
-Blah
+Was macht der Container
+Welches Image wird verwendet?
 
-## Anwendungsübersicht
 
-### 00_Hostsystem
+## ToDo
 
-* Blah
-* Blah
-
-### 01_Proxy_Self_Signed
-
-### 02_Proxy_Letsencrypt
-
-### 03_Heimdall
-
-### 04_SSH_Client
-
-### 05_Samba
-
-### 06_Streaming
-
-### 07_Kodi
-
-### 08_Fakturama
-
-### 09_Pihole
-
-### 10_Nextcloud
-
-### 11_Wordpress
-
-### 12_Modified_Shop
-
-### 13_ Mailserver
-
-### 14_Calibre
-
+* Alles fehlt ;-) 
+* Warum der Server
+* Was kann der Server
+* Wie bauen die Container aufeinander auf?
+* Allg. vorgehensweise
+* Über Conf. Datei, in der geguckt wird, was schon installiert ist?
