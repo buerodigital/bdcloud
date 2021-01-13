@@ -1,16 +1,24 @@
 
-# 02_Heimdall
+# 13_Calibre
 
-Heimdall is an elegant solution to organise all your web applications. It's dedicated to this purpose so you won't lose your links in a sea of bookmarks. Why not use it as your browser start page? It even has the ability to include a search bar using either Google, Bing or DuckDuckGo.
+Welches Programm?
 
-Heimdall ist der Einstiegspunkt zu des BDCloud Servers. Die von diesem Repository Installierten Anwendungen werden automatisch auf der Startseite von Heimdall eingetragen. 
 
-<https://heimdall.site/>
+## Einleitung
 
-## Abhängigkeiten
-
-00_Host  
-01_Proxy
+Was macht der Container
+Welches Image wird verwendet?
 
 
 ## ToDo
+
+* Welches Programm?
+* In Heimdall einfügen! - SQLite
+* docker-compose.yml auf Basis der Erkenntnisse erstellen
+* Alle vorbereitungen werden in ../install.sh berücksichtig
+* Einleitung schreiben (was passiert in dieser compose Datei?)
+* Beschreibung des verwendeten Programms schreiben
+* Testen, testen, testen
+
+
+## Links und Hinweise
