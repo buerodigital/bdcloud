@@ -24,6 +24,12 @@ Welches Image wird verwendet?
 
 
 ## Links und Hinweise
+Lokal ist es mit subdomains eher schlecht!!!! Wahrscheinlich eher mit nem Subfolder zu realisieren.
+Extern bleibt es bei Subdomains!!
+
+<https://serverfault.com/questions/988488/route-traefik-to-subfolder>
+
+
 <https://stackoverflow.com/questions/55435997/using-etc-hosts-with-docker>  
 <https://techsch.com/tutorials/multiple-websites-jwilder-nginx-proxy-letsencrypt>
 
