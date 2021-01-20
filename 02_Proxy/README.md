@@ -1,7 +1,7 @@
 
 # 02_Proxy
 
-NGINX // Heimdall
+Traefik // Heimdall
 
 
 ## Einleitung
@@ -13,7 +13,9 @@ Welches Image wird verwendet?
 ## ToDo
 
 * Welcher Proxy wird es und wie wird er eingerichtet?
+  Traefik - s. docker-compose.yml
 * Einrichtung sollte sowohl mit Lets Encrypt als auch mit selbst signierten Zertifikaten funktionieren
+  Wird es
 * Heimdall als Startseite (immer)
 * Heimdall wird in der compose Datei mit installiert (02_Heimdall entfällt)
 * docker-compose.yml auf Basis der Erkenntnisse erstellen
@@ -24,12 +26,10 @@ Welches Image wird verwendet?
 
 
 ## Links und Hinweise
-Lokal ist es mit subdomains eher schlecht!!!! Wahrscheinlich eher mit nem Subfolder zu realisieren.
-Extern bleibt es bei Subdomains!!
+Lokal -> Subfolder
+Extern ??
 
-<https://serverfault.com/questions/988488/route-traefik-to-subfolder>
+Quelle No1 -> <https://traefik.io>
 
 
-<https://stackoverflow.com/questions/55435997/using-etc-hosts-with-docker>  
-<https://techsch.com/tutorials/multiple-websites-jwilder-nginx-proxy-letsencrypt>
 
