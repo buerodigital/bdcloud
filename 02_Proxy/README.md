@@ -12,9 +12,9 @@ Welches Image wird verwendet?
 
 ## ToDo
 
-* Welcher Proxy wird es und wie wird er eingerichtet?
+* Welcher Proxy wird es und wie wird er eingerichtet?  
   Traefik - s. docker-compose.yml
-* Einrichtung sollte sowohl mit Lets Encrypt als auch mit selbst signierten Zertifikaten funktionieren
+* Einrichtung sollte sowohl mit Lets Encrypt als auch mit selbst signierten Zertifikaten funktionieren  
   Wird es
 * Heimdall als Startseite (immer)
 * Heimdall wird in der compose Datei mit installiert (02_Heimdall entfällt)
@@ -26,7 +26,7 @@ Welches Image wird verwendet?
 
 
 ## Links und Hinweise
-Lokal -> Subfolder
+Lokal -> Subfolder  
 Extern ??
 
 Quelle No1 -> <https://traefik.io>
