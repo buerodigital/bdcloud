@@ -11,6 +11,7 @@ Welches Image wird verwendet?
 
 Unbedingt mal hier gucken!!!  
 <https://github.com/linuxserver/reverse-proxy-confs/blob/master/pihole.subfolder.conf.sample>
+<https://docs.linuxserver.io/general/swag#using-heimdall-as-the-home-page-at-domain-root>
 
 
 ## ToDo
