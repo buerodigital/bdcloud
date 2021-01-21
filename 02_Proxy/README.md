@@ -9,6 +9,9 @@ Traefik // Heimdall
 Was macht der Proxy bzw. Heimdall
 Welches Image wird verwendet?
 
+Unbedingt mal hier gucken!!!  
+<https://github.com/linuxserver/reverse-proxy-confs/blob/master/pihole.subfolder.conf.sample>
+
 
 ## ToDo
 
