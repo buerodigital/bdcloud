@@ -11,4 +11,5 @@ git, docker, docker-compose, openssl, open ssh
 # Git Repo klonen und Verzeichnisstruktur erstellen
 
 
+# Bash Menü für User, etc
 
