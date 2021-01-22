@@ -1,9 +1,14 @@
 #!/bin/bash
 
+# Systemupdate und Hostnamen
+
 # Basisprogramme installieren
+git, docker, docker-compose, openssl, open ssh
 
 # Userberechtigungen
+"Root" User der Dockergruppen hinzufügen
 
-# Github clonen
+# Git Repo klonen und Verzeichnisstruktur erstellen
 
-# Benötigte Container installieren (einzeln? via config?)
+
+
