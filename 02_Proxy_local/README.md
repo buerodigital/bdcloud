@@ -37,9 +37,9 @@ Unbedingt mal hier gucken!!!
 ## Installation  
 
 * "docker-compose.yml" erstellen und "docker-compose build" ausführen 
-* Die Datei ./conf_01_Proxy/nginx/site-confs/default durch default ersetzen
-* Die Datei proxy.conf nach ./conf_01_Proxy/nginx/ kopieren
-* Die Datei heimdall.subfolder.conf nach ./conf_01_Proxy/nginx/proxy-confs/ kopieren (Ordner erstellen)
+* Die Datei ./conf_02_Proxy/nginx/site-confs/default durch default ersetzen
+* Die Datei proxy.conf nach ./conf_02_Proxy/nginx/ kopieren
+* Die Datei heimdall.subfolder.conf nach ./conf_02_Proxy/nginx/proxy-confs/ kopieren (Ordner erstellen)
 
 
 ## Links und Hinweise
