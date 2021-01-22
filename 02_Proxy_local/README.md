@@ -22,12 +22,9 @@ Unbedingt mal hier gucken!!!
 
 ## ToDo
 
-* Welcher Proxy wird es und wie wird er eingerichtet?  
-  NGINX
-* Einrichtung sollte sowohl mit Lets Encrypt als auch mit selbst signierten Zertifikaten funktionieren  
-  Wird es nicht - es wird 2 Versionen geben!! Diese und SWAG?
-* Heimdall als Startseite (immer)
-* Heimdall wird in der compose Datei mit installiert (02_Heimdall entfällt)
+
+* Erstellung von SWAG Container für 2. Proxyversion
+* Heimdall Konfiguration anpassen: Hintergrundbild, Suchmaschine einblenden
 * Alle vorbereitungen werden in ../install.sh berücksichtig
 * Einleitung schreiben (was passiert in dieser compose Datei?
 * Beschreibunf NGINX und Heimdall schreiben
