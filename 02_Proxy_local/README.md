@@ -1,39 +1,40 @@
 
-# 02_Proxy
+# 02_Proxy_local
 
-Traefik // Heimdall
-
+Es wird ein Nginx-Container als Reverse Proxy installiert. Zusätzlich wird Heimdall als Startseite installiert.  
+Weitere Webanwendungen werden über zusätzliche Conf-Dateien (werden im Verzeichnis des Proxys abgelegt) installiert.  
+Vergleich:  
+<https://github.com/linuxserver/reverse-proxy-confs/blob/master/pihole.subfolder.conf.sample>  
+  
+Alle Container werden über Subfolder angesprochen!!!  
+  
+  
 
 ## Einleitung
 
 Was macht der Proxy bzw. Heimdall
-Welches Image wird verwendet?
 
 Unbedingt mal hier gucken!!!  
-<https://github.com/linuxserver/reverse-proxy-confs/blob/master/pihole.subfolder.conf.sample>
 <https://docs.linuxserver.io/general/swag#using-heimdall-as-the-home-page-at-domain-root>
 
 
 ## ToDo
 
 * Welcher Proxy wird es und wie wird er eingerichtet?  
-  Traefik - s. docker-compose.yml
+  NGINX
 * Einrichtung sollte sowohl mit Lets Encrypt als auch mit selbst signierten Zertifikaten funktionieren  
-  Wird es
+  Wird es nicht - es wird 2 Versionen geben!! Diese und SWAG?
 * Heimdall als Startseite (immer)
 * Heimdall wird in der compose Datei mit installiert (02_Heimdall entfällt)
-* docker-compose.yml auf Basis der Erkenntnisse erstellen
 * Alle vorbereitungen werden in ../install.sh berücksichtig
 * Einleitung schreiben (was passiert in dieser compose Datei?
-* Beschreibunf NGINX schreiben
+* Beschreibunf NGINX und Heimdall schreiben
 * Testen, testen, testen
 
 
 ## Links und Hinweise
-Lokal -> Subfolder  
-Extern ??
 
-Quelle No1 -> <https://traefik.io>
+Quelle No1 -> <https://linuxserver.io>
 
 
 
