@@ -33,6 +33,12 @@ Unbedingt mal hier gucken!!!
 * Beschreibunf NGINX und Heimdall schreiben
 * Testen, testen, testen
 
+## Installation  
+
+* "docker-compose.yml" erstellen und "docker-compose build" ausführen 
+* Die Datei proxy.conf nach ./conf_01_Proxy/nginx/ kopieren
+* Die Datei heimdall.subfolder.conf nach ./conf_01_Proxy/nginx/proxy-confs/ kopieren (Ordner erstellen)
+
 
 ## Links und Hinweise
 
