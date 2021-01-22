@@ -20,16 +20,6 @@ Welches Image wird verwendet?
 * Testen, testen, testen
 * Nur DNS kein DHCP!!
 
-sudo systemctl stop systemd-resolved
-sudo systemctl disable systemd-resolved
-sudo nano /etc/resolv.conf:
-
-  #nameserver 127.0.0.53
-  #options edns0
-  #search local.mm
-
-  nameserver 127.0.0.1
-  nameserver 192.168.178.1
 
 
 
