@@ -1,5 +1,5 @@
 
-# 08_PiHole
+# 03_PiHole
 
 Welches Programm?
 
@@ -20,8 +20,14 @@ Welches Image wird verwendet?
 * Testen, testen, testen
 * Nur DNS kein DHCP!!
 
+  
+  
+## Installation  
 
-
+* "docker-compose.yml" erstellen und "docker-compose build" ausführen 
+* Die Datei /etc/resolv.conf durch resolv.conf ersetzen
+* Die Datei pihole.subfolder.conf nach ./conf_02_Proxy/nginx/proxy-confs/ kopieren
+* 
 
 
 ## Links und Hinweise
