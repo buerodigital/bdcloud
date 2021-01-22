@@ -1,15 +1,16 @@
 version: "3.7"
 
 services:
-  nginx:
-    image: ghcr.io/linuxserver/nginx
-    container_name: nginx
+  proxy:
+    image: linuxserver/nginx:amd64-version-8349a582
+    container_name: proxy
     environment:
+      # User (Docker User) und Gruppen (Docker Gruppe) anpassen
       - PUID=1000
-      - PGID=1000
-      - TZ=Europe/London
+      - PGID=998
+      - TZ=Europe/Berlin
     volumes:
-      - ./proxy:/config
+      - ./conf_01_Proxy:/config
     ports:
       - 80:80
       - 443:443
@@ -18,14 +19,14 @@ services:
       - proxy
 
   heimdall:
-    image: ghcr.io/linuxserver/heimdall
+    image: linuxserver/heimdall:version-2.2.2
     container_name: heimdall
     environment:
       - PUID=1000
-      - PGID=1000
-      - TZ=Europe/London
+      - PGID=998
+      - TZ=Europe/Berlin
     volumes:
-      - ./heimdall:/config
+      - ./conf_01_Heimdall:/config
     restart: unless-stopped
     networks:
       - proxy
