@@ -32,10 +32,12 @@ Unbedingt mal hier gucken!!!
 * Einleitung schreiben (was passiert in dieser compose Datei?
 * Beschreibunf NGINX und Heimdall schreiben
 * Testen, testen, testen
-
+  
+  
 ## Installation  
 
 * "docker-compose.yml" erstellen und "docker-compose build" ausführen 
+* Die Datei ./conf_01_Proxy/nginx/site-confs/default durch default ersetzen
 * Die Datei proxy.conf nach ./conf_01_Proxy/nginx/ kopieren
 * Die Datei heimdall.subfolder.conf nach ./conf_01_Proxy/nginx/proxy-confs/ kopieren (Ordner erstellen)
 
