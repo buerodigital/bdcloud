@@ -27,7 +27,8 @@ Welches Image wird verwendet?
 * "docker-compose.yml" erstellen und "docker-compose build" ausführen 
 * Die Datei /etc/resolv.conf durch resolv.conf ersetzen
 * Die Datei pihole.subfolder.conf nach ./conf_02_Proxy/nginx/proxy-confs/ kopieren
-* 
+* sudo systemctl disable systemd-resolved
+* sudo systemctl stop systemd-resolved
 
 
 ## Links und Hinweise
