@@ -7,6 +7,8 @@ Vergleich:
 <https://github.com/linuxserver/reverse-proxy-confs/blob/master/pihole.subfolder.conf.sample>  
   
 Alle Container werden über Subfolder angesprochen!!!  
+
+Die Container werden NICHT über externe Ports freigegeben und sind nur über den Reverse Proxy angesprochen!!!
   
   
 
