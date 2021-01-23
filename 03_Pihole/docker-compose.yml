@@ -4,23 +4,21 @@ services:
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
-#    ports:
-#      - 53:53/tcp
-#      - 53:53/udp
-#      - 67:67/udp
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
     environment:
       - TZ=Europe/Berlin
       - WEBPASSWORD: 'sicheresPasswort'  # hier euer Passwort eingeben
     # Volumes store your data between container upgrades
     volumes:
-      - ./conf_03_Pihole/etc-pihole/:/etc/pihole/
-      - ./conf_03_Pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/
+      - /bdcloud/conf_03_Pihole/etc-pihole/:/etc/pihole/
+      - /bdcloud/conf_03_Pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
     networks:
       - proxy
-
 
 networks:
   proxy:
