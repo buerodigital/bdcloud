@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 # Installation 02_Proxy_local
 docker network create proxy
