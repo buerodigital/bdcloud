@@ -25,3 +25,4 @@ sudo apt-get --assume-yes clean
 sudo apt-get --assume-yes autoremove
 docker system prune -a --volumes
 
+echo "Bitte den aktuellen User abmelden und wieder anmelden!!!"
