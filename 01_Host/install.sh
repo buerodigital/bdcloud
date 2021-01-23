@@ -1,23 +1,27 @@
 #!/bin/bash
 
+# Manuell ausführen!!!
+# cd /
+# sudo git clone https://github.com/buerodigital/bdcloud.git
+# sudo chown -R 1000:1000 /bdcloud
+# sudo chmod -R +x /bdcloud
+
 # Systemupdate und Hostnamen
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
+sudo apt-get --assume-yes update
+sudo apt-get --assume-yes upgrade
+sudo apt-get --assume-yes dist-upgrade
 
-# Basisprogramme installieren
-git, docker, docker-compose, openssl, open ssh
+# Programme installieren
+docker, docker-compose, 
+sudo apt-get --assume-yes install git openssl openssh-server apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker $USER
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s) -$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
-# Userberechtigungen
-"Root" User der Dockergruppen hinzufügen
-
-# Git Repo klonen und Verzeichnisstruktur erstellen
-cd ~
-git clone https://github.com/buerodigital/bdcloud.git
+# Aufräumen
+sudo apt-get --assume-yes clean
+sudo apt-get --assume-yes autoremove
 docker system prune -a --volumes
-docker network create proxy
-docker-compose -f ~/bdcloud/02_Proxy_local/docker-compose.yml up --no-start
-
-
-# Bash Menü für User, etc
 
