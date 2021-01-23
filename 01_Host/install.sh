@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Manuell ausführen!!!
-# cd /
-# sudo git clone https://github.com/buerodigital/bdcloud.git
-# sudo chown -R 1000:1000 /bdcloud
-# sudo chmod -R +x /bdcloud
-
 # Systemupdate und Hostnamen
 sudo apt-get --assume-yes update
 sudo apt-get --assume-yes upgrade
