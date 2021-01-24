@@ -9,7 +9,7 @@ services:
       - 53:53/udp
     environment:
       - TZ=Europe/Berlin
-      - WEBPASSWORD: 'sicheresPasswort'  # hier euer Passwort eingeben
+      - WEBPASSWORD=pass  # hier euer Passwort eingeben
     # Volumes store your data between container upgrades
     volumes:
       - /bdcloud/conf_03_Pihole/etc-pihole/:/etc/pihole/
