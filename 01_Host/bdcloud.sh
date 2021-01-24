@@ -15,3 +15,9 @@ sudo cp /bdcloud/03_Pihole/resolv.conf /etc/resolv.conf
 docker-compose -f /bdcloud/03_Pihole/docker-compose.yml up --no-start
 cp -f /bdcloud/03_Pihole/pihole.subfolder.conf /bdcloud/conf_02_Proxy/nginx/proxy-confs/heimdall.subfolder.conf
 
+# Installation 04_Samba
+mkdir /bdcloud/vol_smb_video
+mkdir /bdcloud/vol_smb_audio
+mkdir /bdcloud/vol_smb_pictures
+mkdir /bdcloud/vol_smb_fakturama
+mkdir /bdcloud/vol_smb_home_mark
