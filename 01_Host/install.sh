@@ -17,6 +17,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Aufräumen
 sudo apt-get --assume-yes clean
 sudo apt-get --assume-yes autoremove
+docker stop $(sudo docker ps -a -q)
 docker system prune -a --volumes
 
 echo "Bitte den aktuellen User abmelden und wieder anmelden!!!"
