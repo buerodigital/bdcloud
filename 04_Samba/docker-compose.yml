@@ -48,6 +48,7 @@ services:
       SHARE3: "pictures;/opt/nas_data/pictures;yes;no;no;mark,SMB;'mark';'none';'my awesome picture share"
       SHARE4: "fakturama;/opt/nas_data/fakturama;yes;no;no;fakturama;'mark';'none';'my awesome fakturama share"
       SHARE5: "home_mark;/opt/nas_data/home_mark;yes;no;no;fakturama;'mark';'none';'my awesome home_mark share"
+      SHARE6: "home_mark;/opt/nas_data/home_mark;yes;no;no;mark;'mark';'none';'my awesome home_mark share"
       
       # workgroup/domain name for share default: "MYGROUP"
       WORKGROUP: "WORKGROUP"
@@ -74,6 +75,7 @@ services:
       - /bdcloud/vol_smb_pictures:/opt/pictures:z # :z allows share to be used by multiple containers
       - /bdcloud/vol_smb_fakturama:/opt/fakturama:z # :z allows share to be used by multiple containers
       - /bdcloud/vol_smb_home_mark:/opt/home_mark:z # :z allows share to be used by multiple containers
+      - /bdcloud/vol_smb_tv:/opt/tv:z # :z allows share to be used by multiple containers
       
 networks:
     default:
