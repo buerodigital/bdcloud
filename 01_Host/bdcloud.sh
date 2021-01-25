@@ -27,10 +27,16 @@ mkdir /bdcloud/vol_smb_tv
 docker-compose -f /bdcloud/04_Samba/docker-compose.yml up -d
 docker-compose -f /bdcloud/04_Samba/docker-compose.yml down
 
+# Installation 05_DLNA
+docker-compose -f /bdcloud/04_Samba/docker-compose.yml up -d
+docker-compose -f /bdcloud/04_Samba/docker-compose.yml down
+cp -f /bdcloud/05_DLNA/emby.subfolder.conf /bdcloud/conf_02_Proxy/nginx/proxy-confs/heimdall.subfolder.conf
+
 
 
 # Dienste starten
 docker-compose -f /bdcloud/03_Pihole/docker-compose.yml up -d
 docker-compose -f /bdcloud/04_Samba/docker-compose.yml up -d
+docker-compose -f /bdcloud/05_DLNA/docker-compose.yml up -d
 # Proxy als letztes starten
 docker-compose -f /bdcloud/02_Proxy_local/docker-compose.yml up -d
