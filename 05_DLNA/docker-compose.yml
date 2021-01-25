@@ -13,7 +13,7 @@ services:
       - /bdcloud/vol_smb_Video:/data/tvshows
       - /bdcloud/vol_smb_Audio:/data/tvshows
       - /bdcloud/vol_smb_Pictures:/data/tvshows
-      - /bdcloud/vol_smb_TV:/data/tvshows
+      - /bdcloud/vol_smb_tv:/data/tvshows
 #      - /opt/vc/lib:/opt/vc/lib #optional
 #    ports:
 #      - 8096:8096
