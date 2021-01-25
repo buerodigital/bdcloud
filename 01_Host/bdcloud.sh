@@ -23,6 +23,7 @@ mkdir /bdcloud/vol_smb_audio
 mkdir /bdcloud/vol_smb_pictures
 mkdir /bdcloud/vol_smb_fakturama
 mkdir /bdcloud/vol_smb_home_mark
+mkdir /bdcloud/vol_smb_tv
 docker-compose -f /bdcloud/04_Samba/docker-compose.yml up -d
 docker-compose -f /bdcloud/04_Samba/docker-compose.yml down
 
