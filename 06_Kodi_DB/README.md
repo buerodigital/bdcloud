@@ -23,4 +23,5 @@ Welches Image wird verwendet?
 
 
 ## Links und Hinweise  
-<https://github.com/mrskug/docker-headless-kodi-video-server/blob/master/docker-compose.yml>
+<https://github.com/mrskug/docker-headless-kodi-video-server/blob/master/docker-compose.yml>  
+<https://github.com/linuxserver/docker-kodi-headless>  
