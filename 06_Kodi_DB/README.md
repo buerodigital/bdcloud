@@ -22,4 +22,5 @@ Welches Image wird verwendet?
 * Testen, testen, testen
 
 
-## Links und Hinweise
+## Links und Hinweise  
+<https://github.com/mrskug/docker-headless-kodi-video-server/blob/master/docker-compose.yml>
