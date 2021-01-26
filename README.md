@@ -12,14 +12,16 @@ Welches Image wird verwendet?
 ## Installation
 
 Folgende Befehle müssen manuell ausgeführt werden:  
-  
+
+...sh
 cd /  
 sudo git clone https://github.com/buerodigital/bdcloud.git  
 sudo chown -R 1000:1000 /bdcloud  
 sudo chmod -R +x /bdcloud  
 cd /bdcloud/01_Host  
 ./install.sh  
-  
+...
+
 Ab- und wieder anmelden  
   
 cd /bdcloud/01_Host  
