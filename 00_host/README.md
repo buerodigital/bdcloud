@@ -1,7 +1,7 @@
 
 # 02_Host
 
-Ubuntu als Vorbereitung
+Als Basis dient eine frische Ubuntu 20.04 LTS Version.
 
 
 ## Einleitung
