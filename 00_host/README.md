@@ -9,6 +9,8 @@ Als Basis dient eine frische Ubuntu 20.04 LTS Version.
 Was wird installiert und warum?
 
 
+
+
 ## ToDo
 
 * UFW installieren und nur entsprechende Ports auf dem Server freigeben
