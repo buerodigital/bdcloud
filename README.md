@@ -41,3 +41,4 @@ cd /bdcloud/01_Host
 
 ### Ideen
 <https://geek-cookbook.funkypenguin.co.nz/recipes/autopirate/>
+<https://selfhosters.net>
