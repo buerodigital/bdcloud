@@ -10,7 +10,7 @@ services:
       - PGID=998
       - TZ=Europe/Berlin
     volumes:
-      - /bdcloud/conf_02_Proxy:/config
+      - conf_01_proxy:/config
     ports:
       - 80:80
       - 443:443
@@ -26,7 +26,7 @@ services:
       - PGID=998
       - TZ=Europe/Berlin
     volumes:
-      - /bdcloud/conf_02_Heimdall:/config
+      - conf_01_heimdall:/config
     restart: unless-stopped
     networks:
       - proxy
@@ -34,3 +34,7 @@ services:
 networks:
   proxy:
     external: true
+
+volumes:
+  conf_01_proxy:
+  conf_01_heimdall:
