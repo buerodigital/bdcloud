@@ -8,10 +8,10 @@ docker volume create --name=conf_01_heimdall
 docker-compose -f /bdcloud/02_Proxy_local/docker-compose.yml up -d
 docker-compose -f /bdcloud/02_Proxy_local/docker-compose.yml down
 
-cp -f /bdcloud/02_Proxy_local/default /bdcloud/_volumes/conf_02_Proxy/_data/nginx/site-confs/default
-cp -f /bdcloud/02_Proxy_local/proxy.conf /bdcloud/_volumes/conf_02_Proxy/_data/nginx/proxy.conf
-mkdir /bdcloud/_volumes/conf_02_Proxy/_data/nginx/proxy-confs
-cp -f /bdcloud/02_Proxy_local/heimdall.subfolder.conf /bdcloud/_volumes/conf_02_Proxy/_data/nginx/proxy-confs/heimdall.subfolder.conf
+cp -f /bdcloud/02_Proxy_local/default /bdcloud/_volumes/conf_01_Proxy/_data/nginx/site-confs/default
+cp -f /bdcloud/02_Proxy_local/proxy.conf /bdcloud/_volumes/conf_01_Proxy/_data/nginx/proxy.conf
+mkdir /bdcloud/_volumes/conf_01_Proxy/_data/nginx/proxy-confs
+cp -f /bdcloud/02_Proxy_local/heimdall.subfolder.conf /bdcloud/_volumes/conf_01_Proxy/_data/nginx/proxy-confs/heimdall.subfolder.conf
 
 # Installation 03_Pihole
 sudo systemctl disable systemd-resolved
