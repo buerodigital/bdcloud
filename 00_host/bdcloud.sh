@@ -24,25 +24,25 @@ cp -f /bdcloud/02_pihole/pihole.subfolder.conf /bdcloud/_volumes/conf_01_proxy/_
 
 
 # Installation 04_Samba
-mkdir /bdcloud/vol_smb_video
-mkdir /bdcloud/vol_smb_audio
-mkdir /bdcloud/vol_smb_pictures
-mkdir /bdcloud/vol_smb_fakturama
-mkdir /bdcloud/vol_smb_home_mark
-mkdir /bdcloud/vol_smb_tv
-docker-compose -f /bdcloud/04_Samba/docker-compose.yml up -d
-docker-compose -f /bdcloud/04_Samba/docker-compose.yml down
+docker volume create --name=smb_video
+docker volume create --name=smb_audio
+docker volume create --name=smb_pictures
+docker volume create --name=smb_fakturama
+docker volume create --name=smb_home_mark
+docker volume create --name=smb_tv
+docker-compose -f /bdcloud/03_samba/docker-compose.yml up -d
+docker-compose -f /bdcloud/03_samba/docker-compose.yml down
 
 # Installation 05_DLNA
-docker-compose -f /bdcloud/04_Samba/docker-compose.yml up -d
-docker-compose -f /bdcloud/04_Samba/docker-compose.yml down
-cp -f /bdcloud/05_DLNA/emby.subfolder.conf /bdcloud/conf_02_Proxy/nginx/proxy-confs/heimdall.subfolder.conf
+#docker-compose -f /bdcloud/04_Samba/docker-compose.yml up -d
+#docker-compose -f /bdcloud/04_Samba/docker-compose.yml down
+#cp -f /bdcloud/05_DLNA/emby.subfolder.conf /bdcloud/conf_02_Proxy/nginx/proxy-confs/heimdall.subfolder.conf
 
 
 
 # Dienste starten
-docker-compose -f /bdcloud/03_Pihole/docker-compose.yml up -d
-docker-compose -f /bdcloud/04_Samba/docker-compose.yml up -d
-docker-compose -f /bdcloud/05_DLNA/docker-compose.yml up -d
+docker-compose -f /bdcloud/02_pihole/docker-compose.yml up -d
+docker-compose -f /bdcloud/03_samba/docker-compose.yml up -d
+#docker-compose -f /bdcloud/05_dlna/docker-compose.yml up -d
 # Proxy als letztes starten
-docker-compose -f /bdcloud/02_Proxy_local/docker-compose.yml up -d
+docker-compose -f /bdcloud/01_proxy/docker-compose.yml up -d
