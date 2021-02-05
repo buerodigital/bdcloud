@@ -83,7 +83,7 @@ networks:
 volumes:
   smb_video:
     external: true
-  mb_audio:
+  smb_audio:
     external: true
   smb_pictures:
     external: true
