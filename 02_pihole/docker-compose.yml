@@ -3,7 +3,7 @@ version: "3.7"
 services:
   pihole:
     container_name: pihole
-    image: pihole/pihole:latest
+    image: pihole/pihole:v5.6
     ports:
       - 53:53/tcp
       - 53:53/udp
@@ -12,8 +12,8 @@ services:
       - WEBPASSWORD=pass  # hier euer Passwort eingeben
     # Volumes store your data between container upgrades
     volumes:
-      - /bdcloud/conf_03_Pihole/etc-pihole/:/etc/pihole/
-      - /bdcloud/conf_03_Pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/
+      - conf_02_pihole:/etc/pihole/
+      - conf_02_pihole_dns:/etc/dnsmasq.d/
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
@@ -22,4 +22,10 @@ services:
 
 networks:
   proxy:
+    external: true
+
+volumes:
+  conf_02_pihole:
+    external: true
+  conf_02_pihole_dns:
     external: true
