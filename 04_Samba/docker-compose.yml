@@ -70,12 +70,28 @@ services:
     tmpfs:
       - /tmp
     volumes:
-      - /bdcloud/vol_smb_video/video:/opt/video:z # :z allows share to be used by multiple containers
-      - /bdcloud/vol_smb_audio:/opt/audio:z # :z allows share to be used by multiple containers
-      - /bdcloud/vol_smb_pictures:/opt/pictures:z # :z allows share to be used by multiple containers
-      - /bdcloud/vol_smb_fakturama:/opt/fakturama:z # :z allows share to be used by multiple containers
-      - /bdcloud/vol_smb_home_mark:/opt/home_mark:z # :z allows share to be used by multiple containers
-      - /bdcloud/vol_smb_tv:/opt/tv:z # :z allows share to be used by multiple containers
+      - smb_video:/opt/video:z # :z allows share to be used by multiple containers
+      - smb_audio:/opt/audio:z # :z allows share to be used by multiple containers
+      - smb_pictures:/opt/pictures:z # :z allows share to be used by multiple containers
+      - smb_fakturama:/opt/fakturama:z # :z allows share to be used by multiple containers
+      - smb_home_mark:/opt/home_mark:z # :z allows share to be used by multiple containers
+      - smb_tv:/opt/tv:z # :z allows share to be used by multiple containers
       
 networks:
     default:
+    
+volumes:
+  smb_video:
+    external: true
+  mb_audio:
+    external: true
+  smb_pictures:
+    external: true
+  smb_fakturama:
+    external: true
+  smb_home_mark:
+    external: true
+  smb_tv:
+    external: true    
+
+    
