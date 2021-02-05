@@ -3,7 +3,7 @@
 docker stop $(sudo docker ps -a -q)
 docker rm $(sudo docker ps -a -q)
 docker system prune -a --volumes
-umount /var/lib/docker/volumes
+sudo umount /var/lib/docker/volumes
 
 cd /
 sudo rm -Rf /bdcloud
