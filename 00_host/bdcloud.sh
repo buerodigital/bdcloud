@@ -1,25 +1,26 @@
 #!/bin/bash
 
-# Installation 02_Proxy_local
+# Installation 01_proxy
 docker network create proxy
 docker volume create --name=conf_01_proxy
 docker volume create --name=conf_01_heimdall
-
-docker-compose -f /bdcloud/02_Proxy_local/docker-compose.yml up -d
-docker-compose -f /bdcloud/02_Proxy_local/docker-compose.yml down
-
-cp -f /bdcloud/02_Proxy_local/default /bdcloud/_volumes/conf_01_proxy/_data/nginx/site-confs/default
-cp -f /bdcloud/02_Proxy_local/proxy.conf /bdcloud/_volumes/conf_01_proxy/_data/nginx/proxy.conf
+docker-compose -f /bdcloud/01_proxy/docker-compose.yml up -d
+docker-compose -f /bdcloud/01_proxy/docker-compose.yml down
+cp -f /bdcloud/01_proxy/default /bdcloud/_volumes/conf_01_proxy/_data/nginx/site-confs/default
+cp -f /bdcloud/01_proxy/proxy.conf /bdcloud/_volumes/conf_01_proxy/_data/nginx/proxy.conf
 mkdir /bdcloud/_volumes/conf_01_proxy/_data/nginx/proxy-confs
-cp -f /bdcloud/02_Proxy_local/heimdall.subfolder.conf /bdcloud/_volumes/conf_01_proxy/_data/nginx/proxy-confs/heimdall.subfolder.conf
+cp -f /bdcloud/01_proxy/heimdall.subfolder.conf /bdcloud/_volumes/conf_01_proxy/_data/nginx/proxy-confs/heimdall.subfolder.conf
 
-# Installation 03_Pihole
+
+# Installation 02_pihole
+docker volume create --name=conf_01_proxy
 sudo systemctl disable systemd-resolved
 sudo systemctl stop systemd-resolved
-sudo cp /bdcloud/03_Pihole/resolv.conf /etc/resolv.conf
-docker-compose -f /bdcloud/03_Pihole/docker-compose.yml up -d
-docker-compose -f /bdcloud/03_Pihole/docker-compose.yml down
-cp -f /bdcloud/03_Pihole/pihole.subfolder.conf /bdcloud/conf_02_Proxy/nginx/proxy-confs/heimdall.subfolder.conf
+sudo cp /bdcloud/02_pihole/resolv.conf /etc/resolv.conf
+docker-compose -f /bdcloud/02_pihole/docker-compose.yml up -d
+docker-compose -f /bdcloud/02_pihole/docker-compose.yml down
+cp -f /bdcloud/02_pihole/pihole.subfolder.conf /bdcloud/_volumes/conf_01_proxy/_data/nginx/proxy-confs/pihole.subfolder.conf
+
 
 # Installation 04_Samba
 mkdir /bdcloud/vol_smb_video
