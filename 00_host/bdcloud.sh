@@ -13,7 +13,8 @@ cp -f /bdcloud/01_proxy/heimdall.subfolder.conf /bdcloud/_volumes/conf_01_proxy/
 
 
 # Installation 02_pihole
-docker volume create --name=conf_01_proxy
+docker volume create --name=conf_02_pihole
+docker volume create --name=conf_02_pihole_dns
 sudo systemctl disable systemd-resolved
 sudo systemctl stop systemd-resolved
 sudo cp /bdcloud/02_pihole/resolv.conf /etc/resolv.conf
