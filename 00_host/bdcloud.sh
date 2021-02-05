@@ -1,5 +1,10 @@
 #!/bin/bash
 
+docker-compose -f /bdcloud/01_proxy/docker-compose.yml pull
+docker-compose -f /bdcloud/02_pihole/docker-compose.yml pull
+docker-compose -f /bdcloud/03_samba/docker-compose.yml pull
+
+
 # Installation 01_proxy
 docker network create proxy
 docker volume create --name=conf_01_proxy
