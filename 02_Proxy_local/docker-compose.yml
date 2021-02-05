@@ -37,4 +37,6 @@ networks:
 
 volumes:
   conf_01_proxy:
+    external: true
   conf_01_heimdall:
+    external: true
