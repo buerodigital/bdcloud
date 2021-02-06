@@ -47,9 +47,9 @@ docker-compose -f /bdcloud/03_samba/docker-compose.yml up -d
 docker-compose -f /bdcloud/03_samba/docker-compose.yml down
 
 # Installation 05_DLNA
-#docker-compose -f /bdcloud/04_Samba/docker-compose.yml up -d
-#docker-compose -f /bdcloud/04_Samba/docker-compose.yml down
-#cp -f /bdcloud/05_DLNA/emby.subfolder.conf /bdcloud/conf_02_Proxy/nginx/proxy-confs/heimdall.subfolder.conf
+docker-compose -f /bdcloud/10_dlna/docker-compose.yml up -d
+docker-compose -f /bdcloud/10_dlna/docker-compose.yml down
+cp -f /bdcloud/10_dlna/emby.subfolder.conf /var/lib/docker/volumes/conf_01_proxy/_data/nginx/proxy-confs/emby.subfolder.conf
 
 
 
