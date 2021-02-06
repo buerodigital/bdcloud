@@ -49,17 +49,25 @@ docker-compose -f /bdcloud/03_samba/docker-compose.yml up -d
 docker-compose -f /bdcloud/03_samba/docker-compose.yml down
 
 
-# Installation 05_DLNA
+# Installation 09_Papermerge
+docker volume create --name=conf_09_dms_config
+docker volume create --name=conf_09_dms_data
+docker-compose -f /bdcloud/09_dms/docker-compose.yml up -d
+docker-compose -f /bdcloud/09_dms/docker-compose.yml down
+sudo cp -f /bdcloud/09_dms/papermerge.subfolder.conf /var/lib/docker/volumes/conf_01_proxy/_data/nginx/proxy-confs/papermerge.subfolder.conf
+      
+      
+# Installation 10_DLNA
 docker volume create --name=conf_10_dlna
 docker-compose -f /bdcloud/10_dlna/docker-compose.yml up -d
 docker-compose -f /bdcloud/10_dlna/docker-compose.yml down
 sudo cp -f /bdcloud/10_dlna/emby.subfolder.conf /var/lib/docker/volumes/conf_01_proxy/_data/nginx/proxy-confs/emby.subfolder.conf
 
 
-
 # Dienste starten
 docker-compose -f /bdcloud/02_pihole/docker-compose.yml up -d
 docker-compose -f /bdcloud/03_samba/docker-compose.yml up -d
+docker-compose -f /bdcloud/09_dms/docker-compose.yml up -d
 docker-compose -f /bdcloud/10_dlna/docker-compose.yml up -d
 # Proxy als letztes starten
 docker-compose -f /bdcloud/01_proxy/docker-compose.yml up -d
