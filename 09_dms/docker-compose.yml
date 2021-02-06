@@ -1,1 +1,29 @@
 
+version: "3.7"
+
+services:
+  papermerge:
+    image: linuxserver/papermerge:version-v1.5.5
+    container_name: papermerge
+    environment:
+      - PUID=1000
+      - PGID=998
+      - TZ=Europe/Berlin
+    volumes:
+      - conf_09_dms_config:/config
+      - smb_dms:/data
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
+    
+volumes:
+  conf_09_dms:
+    external: true
+  smb_dms:
+    external: true
