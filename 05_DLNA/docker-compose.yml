@@ -2,21 +2,25 @@ version: "3.7"
 
 services:
   emby:
-    image: ghcr.io/linuxserver/emby
+    image: linuxserver/emby:version-4.5.4.0
     container_name: emby
     environment:
       - PUID=1000
       - PGID=998
       - TZ=Europe/Berlin
     volumes:
-      - /bdcloud/conf_05_DLNA:/config:z # :z allows share to be used by multiple containers
-      - /bdcloud/vol_smb_Video:/data/tvshows:z # :z allows share to be used by multiple containers
-      - /bdcloud/vol_smb_Audio:/data/tvshows:z # :z allows share to be used by multiple containers
-      - /bdcloud/vol_smb_Pictures:/data/tvshows:z # :z allows share to be used by multiple containers
-      - /bdcloud/vol_smb_tv:/data/tvshows:z # :z allows share to be used by multiple containers
+      - conf_10_dlna:/config:z # :z allows share to be used by multiple containers
+#      - /bdcloud/vol_smb_Video:/data/tvshows:z # :z allows share to be used by multiple containers
+#      - /bdcloud/vol_smb_Audio:/data/tvshows:z # :z allows share to be used by multiple containers
+#      - /bdcloud/vol_smb_Pictures:/data/tvshows:z # :z allows share to be used by multiple containers
+#      - /bdcloud/vol_smb_tv:/data/tvshows:z # :z allows share to be used by multiple containers
 #      - /opt/vc/lib:/opt/vc/lib #optional
-#    ports:
-#      - 8096:8096
+      - smb_video:/opt/video:z # :z allows share to be used by multiple containers
+      - smb_audio:/opt/audio:z # :z allows share to be used by multiple containers
+      - smb_pictures:/opt/pictures:z # :z allows share to be used by multiple containers
+      - smb_tv:/opt/tv:z # :z allows share to be used by multiple containers
+    ports:
+      - 8096:8096
 #      - 8920:8920 #optional
 #    devices:
 #      - /dev/dri:/dev/dri #optional
@@ -31,4 +35,15 @@ services:
 networks:
   proxy:
     external: true
-
+    
+volumes:
+  conf_10_dlna:
+    external: true
+  smb_video:
+    external: true
+  smb_audio:
+    external: true
+  smb_pictures:
+    external: true
+  smb_tv:
+    external: true 
