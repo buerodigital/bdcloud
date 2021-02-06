@@ -63,5 +63,4 @@ docker-compose -f /bdcloud/03_samba/docker-compose.yml up -d
 docker-compose -f /bdcloud/10_dlna/docker-compose.yml up -d
 # Proxy als letztes starten
 docker-compose -f /bdcloud/01_proxy/docker-compose.yml up -d
-docker-compose -f /bdcloud/01_proxy/docker-compose.yml down
-docker-compose -f /bdcloud/01_proxy/docker-compose.yml up -d
+
