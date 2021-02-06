@@ -11,7 +11,7 @@ services:
       - TZ=Europe/Berlin
     volumes:
       - conf_09_dms_config:/config
-      - smb_dms:/data
+      - conf_09_dms_data:/data
     ports:
       - 8000:8000
     restart: unless-stopped
@@ -25,5 +25,5 @@ networks:
 volumes:
   conf_09_dms:
     external: true
-  smb_dms:
+  conf_09_dms_data:
     external: true
