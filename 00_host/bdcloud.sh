@@ -5,6 +5,7 @@ function funct_pull {
 docker-compose -f /bdcloud/01_proxy/docker-compose.yml pull
 docker-compose -f /bdcloud/02_pihole/docker-compose.yml pull
 docker-compose -f /bdcloud/03_samba/docker-compose.yml pull
+docker-compose -f /bdcloud/09_dms/docker-compose.yml pull
 docker-compose -f /bdcloud/10_dlna/docker-compose.yml pull
 }
 while [ "$confirm" == "n" ]
