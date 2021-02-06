@@ -19,10 +19,10 @@ docker volume create --name=conf_01_proxy
 docker volume create --name=conf_01_heimdall
 docker-compose -f /bdcloud/01_proxy/docker-compose.yml up -d
 docker-compose -f /bdcloud/01_proxy/docker-compose.yml down
-sudo cp -f /bdcloud/01_proxy/default /var/lib/docker/conf_01_proxy/_data/nginx/site-confs/default
-sudo cp -f /bdcloud/01_proxy/proxy.conf /var/lib/docker/conf_01_proxy/_data/nginx/proxy.conf
+sudo cp -f /bdcloud/01_proxy/default /var/lib/docker/volumes/conf_01_proxy/_data/nginx/site-confs/default
+sudo cp -f /bdcloud/01_proxy/proxy.conf /var/lib/docker/volumes/conf_01_proxy/_data/nginx/proxy.conf
 sudo mkdir /var/lib/docker/conf_01_proxy/_data/nginx/proxy-confs
-cp -f /bdcloud/01_proxy/heimdall.subfolder.conf /var/lib/docker/conf_01_proxy/_data/nginx/proxy-confs/heimdall.subfolder.conf
+cp -f /bdcloud/01_proxy/heimdall.subfolder.conf /var/lib/docker/volumes/conf_01_proxy/_data/nginx/proxy-confs/heimdall.subfolder.conf
 
 
 # Installation 02_pihole
@@ -33,7 +33,7 @@ sudo systemctl stop systemd-resolved
 sudo cp /bdcloud/02_pihole/resolv.conf /etc/resolv.conf
 docker-compose -f /bdcloud/02_pihole/docker-compose.yml up -d
 docker-compose -f /bdcloud/02_pihole/docker-compose.yml down
-sudo cp -f /bdcloud/02_pihole/pihole.subfolder.conf /var/lib/docker/conf_01_proxy/_data/nginx/proxy-confs/pihole.subfolder.conf
+sudo cp -f /bdcloud/02_pihole/pihole.subfolder.conf /var/lib/docker/volumes/conf_01_proxy/_data/nginx/proxy-confs/pihole.subfolder.conf
 
 
 # Installation 04_Samba
