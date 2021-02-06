@@ -1,30 +1,19 @@
 #!/bin/bash
 
-
+confirm="n"
 function funct_pull {
 docker-compose -f /bdcloud/01_proxy/docker-compose.yml pull
 docker-compose -f /bdcloud/02_pihole/docker-compose.yml pull
 docker-compose -f /bdcloud/03_samba/docker-compose.yml pull
 docker-compose -f /bdcloud/10_dlna/docker-compose.yml pull
 }
-funct_pull
-
-
-echo -e "\nFalls die Installation fehlerhaft war bitte mit \"n\" abbrechen:\n"
-read confirm
-
-if [ "$confirm" == "n" ];
-then
+while [ "$confirm" == "n" ]
+do
   funct_pull
-fi
+  echo -e "\nFalls die Installation fehlerhaft war bitte mit \"n\" abbrechen:\n"
+  read confirm
+done
 
-echo -e "\nFalls die Installation fehlerhaft war bitte mit \"n\" abbrechen:\n"
-read confirm
-
-if [ "$confirm" == "n" ];
-then
-  funct_pull
-fi
 
 # Installation 01_proxy
 docker network create proxy
@@ -58,6 +47,7 @@ docker volume create --name=smb_home_mark
 docker volume create --name=smb_tv
 docker-compose -f /bdcloud/03_samba/docker-compose.yml up -d
 docker-compose -f /bdcloud/03_samba/docker-compose.yml down
+
 
 # Installation 05_DLNA
 docker volume create --name=conf_10_dlna
