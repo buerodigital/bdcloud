@@ -4,6 +4,8 @@ services:
   proxy:
     image: linuxserver/nginx:amd64-version-8349a582
     container_name: proxy
+    depends_on:
+      - "heimdall"
     environment:
       # User (Docker User) und Gruppen (Docker Gruppe) anpassen
       - PUID=1000
@@ -17,6 +19,7 @@ services:
     restart: unless-stopped
     networks:
       - proxy
+      
 
   heimdall:
     image: linuxserver/heimdall:version-2.2.2
