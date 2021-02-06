@@ -1,17 +1,30 @@
 #!/bin/bash
 
+
+function funct_pull {
 docker-compose -f /bdcloud/01_proxy/docker-compose.yml pull
 docker-compose -f /bdcloud/02_pihole/docker-compose.yml pull
 docker-compose -f /bdcloud/03_samba/docker-compose.yml pull
+docker-compose -f /bdcloud/10_dlna/docker-compose.yml pull
+}
+funct_pull
+
 
 echo -e "\nFalls die Installation fehlerhaft war bitte mit \"n\" abbrechen:\n"
 read confirm
 
 if [ "$confirm" == "n" ];
 then
-  exit
+  funct_pull
 fi
 
+echo -e "\nFalls die Installation fehlerhaft war bitte mit \"n\" abbrechen:\n"
+read confirm
+
+if [ "$confirm" == "n" ];
+then
+  funct_pull
+fi
 
 # Installation 01_proxy
 docker network create proxy
@@ -56,6 +69,8 @@ cp -f /bdcloud/10_dlna/emby.subfolder.conf /var/lib/docker/volumes/conf_01_proxy
 # Dienste starten
 docker-compose -f /bdcloud/02_pihole/docker-compose.yml up -d
 docker-compose -f /bdcloud/03_samba/docker-compose.yml up -d
-#docker-compose -f /bdcloud/05_dlna/docker-compose.yml up -d
+docker-compose -f /bdcloud/10_dlna/docker-compose.yml up -d
 # Proxy als letztes starten
+docker-compose -f /bdcloud/01_proxy/docker-compose.yml up -d
+docker-compose -f /bdcloud/01_proxy/docker-compose.yml down
 docker-compose -f /bdcloud/01_proxy/docker-compose.yml up -d
