@@ -53,7 +53,7 @@ docker-compose -f /bdcloud/03_samba/docker-compose.yml down
 docker volume create --name=conf_10_dlna
 docker-compose -f /bdcloud/10_dlna/docker-compose.yml up -d
 docker-compose -f /bdcloud/10_dlna/docker-compose.yml down
-cp -f /bdcloud/10_dlna/emby.subfolder.conf /var/lib/docker/volumes/conf_01_proxy/_data/nginx/proxy-confs/emby.subfolder.conf
+sudo cp -f /bdcloud/10_dlna/emby.subfolder.conf /var/lib/docker/volumes/conf_01_proxy/_data/nginx/proxy-confs/emby.subfolder.conf
 
 
 
