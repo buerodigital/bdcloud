@@ -23,7 +23,7 @@ networks:
     external: true
     
 volumes:
-  conf_09_dms:
+  conf_09_dms_config:
     external: true
   conf_09_dms_data:
     external: true
