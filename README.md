@@ -30,15 +30,16 @@ cd /bdcloud/01_Host
 
 ## ToDo
 
-* Alles fehlt ;-) 
-* Warum der Server
-* Was kann der Server
-* Wie bauen die Container aufeinander auf?
+* Alles fehlt ;-)  
+* Warum der Server  
+* Was kann der Server  
+* Wie bauen die Container aufeinander auf?  
 * Allg. vorgehensweise
 * Über Conf. Datei, in der geguckt wird, was schon installiert ist?
 
 
 
 ### Ideen
-<https://geek-cookbook.funkypenguin.co.nz/recipes/autopirate/>
-<https://selfhosters.net>
+<https://geek-cookbook.funkypenguin.co.nz/recipes/autopirate/>  
+<https://selfhosters.net>  
+<https://stackoverflow.com/questions/25310770/clone-docker-image-to-dockerhub-account>
