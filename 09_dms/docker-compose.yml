@@ -12,8 +12,8 @@ services:
     volumes:
       - conf_09_dms_config:/config
       - conf_09_dms_data:/data
-    ports:
-      - 8000:8000
+#    ports:
+#      - 8000:8000
     restart: unless-stopped
     networks:
       - proxy
