@@ -19,8 +19,8 @@ services:
       - smb_audio:/opt/audio:z # :z allows share to be used by multiple containers
       - smb_pictures:/opt/pictures:z # :z allows share to be used by multiple containers
       - smb_tv:/opt/tv:z # :z allows share to be used by multiple containers
-    ports:
-      - 8096:8096
+#    ports:
+#      - 8096:8096
 #      - 8920:8920 #optional
 #    devices:
 #      - /dev/dri:/dev/dri #optional
