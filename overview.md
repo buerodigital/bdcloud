@@ -1,6 +1,16 @@
-00	host	00_host	git openssh openssl docker docker-compose	install_00.sh		static IP from DHCP  	
+00 host  
+git openssh openssl docker docker-compose  
+install_00.sh  
+static IP from DHCP  	
   
-01	proxy	01_proxy	linuxserver/nginx:amd64-version-8349a582 linuxserver/heimdall:version-2.2.2	docker-compose.yml heimdall.subfolder.conf default (nginx) install_01.sh	80/tcp - Redirect 443/tcp - Subfolder	network_proxy Bridge	conf_01_proxy conf_01_heimdall	https://hub.docker.com/r/linuxserver/nginx https://hub.docker.com/r/linuxserver/heimdall	https://nginx.org/ https://heimdall.site/	  
+01	proxy	 
+linuxserver/nginx:amd64-version-8349a582 linuxserver/heimdall:version-2.2.2  
+docker-compose.yml heimdall.subfolder.conf default (nginx) install_01.sh  
+80/tcp - Redirect 443/tcp - Subfolder  
+network_proxy Bridge  
+conf_01_proxy conf_01_heimdal 	
+https://hub.docker.com/r/linuxserver/nginx https://hub.docker.com/r/linuxserver/heimdall  
+https://nginx.org/ https://heimdall.site/	  
   
 02	pihole	02_pihole	pihole/pihole:v5.6	docker-compose.yml pihole.subfolder.conf resolv.conf install_04.sh	53/tcp - DNS 53/udp - DNS 80/tcp - Redirect 443/tcp - Subfolder (+ Redirect / admin!)	network_proxy Bridge	conf_02_pihole conf_02_pihole_dns	https://hub.docker.com/r/pihole/pihole	https://pi-hole.net	  
   
