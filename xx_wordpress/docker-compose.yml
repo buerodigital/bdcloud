@@ -1,1 +1,18 @@
+version: "3.7"
 
+services:
+  wp1:
+    image: linuxserver/nginx:amd64-version-8349a582
+    container_name: wp1
+    depends_on:
+      - "mariadb"
+    environment:
+      # User (Docker User) und Gruppen (Docker Gruppe) anpassen
+      - PUID=1000
+      - PGID=998
+      - TZ=Europe/Berlin
+    volumes:
+      - conf_14_wp1:/config
+    restart: unless-stopped
+    networks:
+      - proxy
